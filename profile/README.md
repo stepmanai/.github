@@ -8,8 +8,12 @@
   <br />
   <br />
   <p align="center">
-    A machine learning framework for standardizing community-driven vertical scroll rhythm games. The following games are currently supported:
-
-
+    A machine learning framework designed to standardize community-driven vertical scroll rhythm games.
   </p>
+
+  <p align="center">
+    ACubed currently supports the following games:
+  </p>
+
+
 </div>
