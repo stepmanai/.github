@@ -22,8 +22,8 @@
         <img src="assets/logo/ffr/no-dark-mode.svg" alt="Logo" width="200px" height=auto>
     </picture>
     <picture>
-        <source srcset="assets/logo/osu!mania/dark-mode.svg"  media="(prefers-color-scheme: dark)">
-        <img src="assets/logo/osu!mania/no-dark-mode.svg" alt="Logo" width="200px" height=auto>
+        <source srcset="assets/logo/osumania/dark-mode.svg"  media="(prefers-color-scheme: dark)">
+        <img src="assets/logo/osumania/no-dark-mode.svg" alt="Logo" width="200px" height=auto>
     </picture>
     <picture>
         <source srcset="assets/logo/quaver/dark-mode.svg"  media="(prefers-color-scheme: dark)">
