@@ -17,7 +17,7 @@
         <source srcset="assets/logo/etterna/dark-mode.svg"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/etterna/no-dark-mode.svg" alt="Logo" width="50px" height=auto></a>
     </picture></a>
-    <a href=""><picture>
+    <a href="https://www.flashflashrevolution.com/"><picture>
         <source srcset="assets/logo/ffr/dark-mode.svg"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/ffr/no-dark-mode.svg" alt="Logo" width="50px" height=auto>
     </picture></a>
