@@ -16,15 +16,15 @@
     <a href="https://etternaonline.com/"><picture>
         <source srcset="assets/logo/etterna/dark-mode.svg"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/etterna/no-dark-mode.svg" alt="Logo" width="50px" height=auto></a>
-    </picture></a>
+    </picture>ㅤ</a>
     <a href="https://www.flashflashrevolution.com/"><picture>
         <source srcset="assets/logo/ffr/dark-mode.svg"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/ffr/no-dark-mode.svg" alt="Logo" width="50px" height=auto>
-    </picture></a>
+    </picture>ㅤ</a>
     <a href="https://osu.ppy.sh/"><picture>
         <source srcset="assets/logo/osumania/dark-mode.svg"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/osumania/no-dark-mode.svg" alt="Logo" width="50px" height=auto>
-    </picture></a>
+    </picture>ㅤ</a>
     <a href="https://quavergame.com/"><picture>
         <source srcset="assets/logo/quaver/dark-mode.svg"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/quaver/no-dark-mode.svg" alt="Logo" width="50px" height=auto>
