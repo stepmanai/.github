@@ -14,7 +14,7 @@
 </div>
 
 ## Introduction
-ACubed is a model framework developed to standardize skill measurement across vertical scroll rhythm games. By leveraging machine learning, it constructs game-independent models that evaluate player performance, taking into account the unique mechanics and difficulty scales of each game to enable more accurate skill comparisons. Currently, ACubed supports the following games:
+Welcome to stepman.ai, an organization devoted to building machine learning algorithms to support the development of community-driven open source vertical scroll rhythm games. Currently, stepman.ai aims to support the following games:
   <p align="center">
     <a href="https://etternaonline.com/"><picture>
         <source srcset="assets/logo/etterna/dark-mode.svg"  media="(prefers-color-scheme: dark)">
@@ -39,4 +39,3 @@ and addresses several key challenges by:
 - Refining the definition of stepfile difficulty through comprehensive chart analysis
 - Evaluating player performance on individual stepfiles
 - Aggregating player scores to derive a comprehensive overall rating
-
