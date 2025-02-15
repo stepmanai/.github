@@ -14,7 +14,7 @@
 </div>
 
 ## Introduction
-Welcome to stepman.ai, an organization devoted to building machine learning algorithms to support the development of community-driven open source vertical scroll rhythm games. Currently, stepman.ai aims to support the following games:
+Welcome to `stepman.ai`, an organization devoted to support community-driven open source vertical scroll rhythm games through machine learning and artificial intelligence. Currently, `stepman.ai` supports the following games:
   <p align="center">
     <a href="https://etternaonline.com/"><picture>
         <source srcset="assets/logo/etterna/dark-mode.svg"  media="(prefers-color-scheme: dark)">
@@ -34,8 +34,12 @@ Welcome to stepman.ai, an organization devoted to building machine learning algo
     </picture></a>
   </p>
 
-and addresses several key challenges by:
-- Standardizing map file formats to facilitate model integration
-- Refining the definition of stepfile difficulty through comprehensive chart analysis
-- Evaluating player performance on individual stepfiles
-- Aggregating player scores to derive a comprehensive overall rating
+and offers modules to address several key challenges including:
+- File format standardization to facilitate framework integration with `trancecode`
+- Scalability of the definition of difficulty to minimize inherent biases and subjectivity with `acubed`
+- Playing performance evaluations based on accuracy and precision to objectively reward players with `pa-scoring`
+- Cross-platform ranked leaderboards to measure and compare player’s skill under a modified ELO rating system with `stepman-rating`
+
+Each module is developed using the following technological stack:
+
+And operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram:
