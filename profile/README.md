@@ -2,7 +2,7 @@
 <br />
 <div align="center">
     <picture>
-        <source srcset="assets/logo/stepman.ai/dark-mode/stepmanai_dark_mode.png"  media="(prefers-color-scheme: dark)">
+        <source srcset="assets/logo/stepman.ai/dark-mode/stepmanai.png"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/acubed/no-dark-mode/stepmanai.png" alt="Logo" width="200px" height=auto>
     </picture>
   <br />
@@ -43,3 +43,12 @@ and offers modules to address several key challenges including:
 Each module is developed using the following technological stack:
 
 And operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram:
+
+```mermaid
+flowchart LR;
+    A-->B["B#dagger; (internal link)"];
+    B-->C;
+    C-->D["D#ddagger; (external link)"];
+    click B "https://gist.github.com/ChristopherA/bffddfdf7b1502215e44cec9fb766dfd/#flowchart-with-hyperlinks"
+    click D "https://gist.github.com/ChristopherA/"
+``` 
