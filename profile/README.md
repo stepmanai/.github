@@ -71,29 +71,28 @@ and operates under the overall `stepman.ai` ecosystem depicted in the following 
   }
 }%%
 
-flowchart TD
+flowchart LR
 
-subgraph Z["<div style="width:25em; display:flex;">stepman.ai</div>"]
-direction LR
-B@{ label: "trancecode" } --> C@{ label: "acubed" }; 
-C --> D1@{ label: "pa-scoring" };
-D1 --> D@{ label: "stepman-rating" };
-end
-
-A1[ ]---|"External Files"|B;
-A4[ ]---|"In-Game APIs"|B;
+D1@{ label: "pa-scoring" } --> D@{ label: "stepman-rating" };
+D---|Player's
+Rating|E2[ ];
+C@{ label: "acubed" }---D1;
+B --> C;
+A4[ ]---|"In-Game
+APIs"|B;
+A1[ ]---|"External
+Files"|B@{label: "trancecode" };
 C---|"Stepfile
-Difficulty"|C1[ ];
-E1[ ]---|Player's Score|D1;
-D---|Player's Rating|E2[ ];
+Difficulty"|F;
+F@{shape: framed-circle} -->|Player's
+Score|D1@{ label: "pa-scoring" };
+
 click B "https://github.com/stepmanai";
 click C "https://github.com/stepmanai";
 click D1 "https://github.com/stepmanai";
 click D "https://github.com/stepmanai";
 style A1 height:0px;
 style A4 height:0px;
-style C1 height:0px;
-style E1 height:0px;
 style E2 height:0px;
 
 ``` 
