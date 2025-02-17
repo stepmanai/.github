@@ -57,6 +57,7 @@ Each module is developed using the following technological stack:
         <img src="https://cdn.simpleicons.org/mongodb/000/000" alt="Logo" width="50px" height=auto></a>
     </picture></a>
 </p>
+
 and operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram:
 
 ```mermaid
