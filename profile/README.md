@@ -5,12 +5,6 @@
         <source srcset="assets/logo/stepman.ai/dark-mode/stepmanai.png"  media="(prefers-color-scheme: dark)">
         <img src="assets/logo/acubed/no-dark-mode/stepmanai.png" alt="Logo" width="200px" height=auto>
     </picture>
-  <br />
-  <br />
-  <p align="center">
-    A suite of machine learning algorithms to support the development of community-driven open source vertical scroll rhythm games.
-  </p>
-  <br />
 </div>
 
 ## Introduction
@@ -45,10 +39,39 @@ Each module is developed using the following technological stack:
 And operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram:
 
 ```mermaid
-flowchart LR;
-    A-->B["B#dagger; (internal link)"];
-    B-->C;
-    C-->D["D#ddagger; (external link)"];
-    click B "https://gist.github.com/ChristopherA/bffddfdf7b1502215e44cec9fb766dfd/#flowchart-with-hyperlinks"
-    click D "https://gist.github.com/ChristopherA/"
+%%{
+  init: {
+    'theme': 'dark',
+    'themeVariables': {
+      'fontFamily': 'courier',
+      'fontSize': '12px'
+    }
+  }
+}%%
+
+flowchart TD
+
+subgraph Z["<div style="width:25em; display:flex;">stepman.ai</div>"]
+direction LR
+B@{ label: "trancecode" } --> C@{ label: "acubed" }; 
+C --> D1@{ label: "pa-scoring" };
+D1 --> D@{ label: "stepman-rating" };
+end
+
+A1[ ]---|"External Files"|B;
+A4[ ]---|"In-Game APIs"|B;
+C---|"Stepfile
+Difficulty"|C1[ ];
+E1[ ]---|Player's Score|D1;
+D---|Player's Rating|E2[ ];
+click B "https://github.com/stepmanai";
+click C "https://github.com/stepmanai";
+click D1 "https://github.com/stepmanai";
+click D "https://github.com/stepmanai";
+style A1 height:0px;
+style A4 height:0px;
+style C1 height:0px;
+style E1 height:0px;
+style E2 height:0px;
+
 ``` 
