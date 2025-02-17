@@ -35,8 +35,29 @@ and offers modules to address several key challenges including:
 - Cross-platform ranked leaderboards to measure and compare player’s skill under a modified ELO rating system with `stepman-rating`
 
 Each module is developed using the following technological stack:
-
-And operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram:
+<p align="center">
+    <a href="https://www.python.org/"><picture>
+        <source srcset="https://cdn.simpleicons.org/python/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/python/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
+    <a href="https://github.com/features/actions"><picture>
+        <source srcset="https://cdn.simpleicons.org/githubactions/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/githubactions/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
+    <a href="https://ubuntu.com/"><picture>
+        <source srcset="https://cdn.simpleicons.org/ubuntu/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/ubuntu/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
+    <a href="https://pypi.org/"><picture>
+        <source srcset="https://cdn.simpleicons.org/pypi/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/pypi/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
+    <a href="https://www.mongodb.com/"><picture>
+        <source srcset="https://cdn.simpleicons.org/mongodb/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/mongodb/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>
+</p>
+and operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram:
 
 ```mermaid
 %%{
