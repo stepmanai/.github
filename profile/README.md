@@ -30,9 +30,8 @@ Welcome to `stepman.ai`, an organization devoted to support community-driven ope
 
 and offers modules to address several key challenges including:
 - File format standardization to facilitate framework integration with `trancecode`
-- Scalability of the definition of difficulty to minimize inherent biases and subjectivity with `acubed`
-- Playing performance evaluations rewarded to players based on standard metrics in confusion matrices (e.g. accuracy, precision, etc.) with `psyduck`
-- Cross-platform ranked leaderboards to measure and compare player’s skill under a modified ELO rating system with `stepman`
+- Objective stepfile feature extraction and unbiased difficulty measurement with `acubed`
+- Cross-platform ranked leaderboards to measure playing performance and compare player skill with `stepman`
 
 Each module is developed using the following technological stack:
 <p align="center">
@@ -81,7 +80,7 @@ APIs"|B;
 B ---|Standardized
 File Format| C@{ label: "acubed" };
 C---|"Stepfile
-Features"|D1@{ label: "psyduck" };
+Features"|D1@{ label: "stepman" };
 C---|"Stepfile
 Difficulty"|F@{ shape: braces, label: "Player 1" };
 F -->|Player 1's
@@ -97,15 +96,15 @@ Difficulty"|F2@{ shape: braces, label: "Player N" };
 F2 -->|Player N's
 Score|D2;
 C---|"Stepfile
-Features"|D2@{ label: "psyduck" };
+Features"|D2@{ label: "stepman" };
 D2 ---|Player N's
 Rating| D@{ label: "stepman" };
 
 
 click B "https://github.com/stepmanai/trancecode";
 click C "https://github.com/stepmanai/acubed";
-click D1 "https://github.com/stepmanai/psyduck";
-click D2 "https://github.com/stepmanai/psyduck";
+click D1 "https://github.com/stepmanai/stepman";
+click D2 "https://github.com/stepmanai/stepman";
 click D "https://github.com/stepmanai/stepman";
 style A1 height:0px;
 style A4 height:0px;
