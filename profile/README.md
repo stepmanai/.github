@@ -57,7 +57,7 @@ Each module is developed using the following technological stack:
     </picture></a>
 </p>
 
-and operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram:
+and operates under the overall `stepman.ai` ecosystem depicted in the following technical diagram for $M$ players and $N$ stepfiles:
 
 ```mermaid
 %%{
