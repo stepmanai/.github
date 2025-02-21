@@ -77,8 +77,8 @@ A1[ ]---|"External
 Files"|B@{label: "trancecode" };
 A4[ ]---|"In-Game
 APIs"|B;
-B ---|Standardized
-File Format| C@{ label: "acubed" };
+
+B ---|"Stepfile 1"| C@{ label: "acubed" };
 C---|"Stepfile
 Features"|D1@{ label: "stepman" };
 C---|"Stepfile
@@ -87,7 +87,8 @@ F -->|Player 1's
 Score|D1;
 D1 ---|Player 1's
 Rating| D@{ label: "stepman" };
-D --> G@{shape: braces, label: "Leaderboards"};
+D --> G@{shape: braces, label: "Stepfile 1
+Leaderboards"};
 
 C ~~~ F3@{ label: "⋮" } ~~~ |⋮| D3["⋮"] ~~~ |⋮| D@{ label: "stepman" };
 
@@ -100,20 +101,67 @@ Features"|D2@{ label: "stepman" };
 D2 ---|Player N's
 Rating| D@{ label: "stepman" };
 
+B ~~~|⋮| C33["⋮"]
+
+B ---|"Stepfile N"| C11@{ label: "acubed" };
+C11---|"Stepfile
+Features"|D111@{ label: "stepman" };
+C11---|"Stepfile
+Difficulty"|F11@{ shape: braces, label: "Player 1" };
+F11 -->|Player 1's
+Score|D111;
+D111 ---|Player 1's
+Rating| D11@{ label: "stepman" };
+D11 --> G11@{shape: braces, label: "Stepfile N
+Leaderboards"};
+
+C11 ~~~ F311@{ label: "⋮" } ~~~ |⋮| D311["⋮"] ~~~ |⋮| D11@{ label: "stepman" };
+
+C11---|"Stepfile
+Difficulty"|F211@{ shape: braces, label: "Player N" };
+F211 -->|Player N's
+Score|D211;
+C11---|"Stepfile
+Features"|D211@{ label: "stepman" };
+D211 ---|Player N's
+Rating| D11@{ label: "stepman" };
+
+G--> H1@{ label: "stepman" }--> H@{ shape: braces, label: "Overall
+Leaderboards" }
+Q["⋮"]~~~P["⋮"]~~~H1
+G11--> H1
 
 click B "https://github.com/stepmanai/trancecode";
 click C "https://github.com/stepmanai/acubed";
 click D1 "https://github.com/stepmanai/stepman";
 click D2 "https://github.com/stepmanai/stepman";
 click D "https://github.com/stepmanai/stepman";
+click C11 "https://github.com/stepmanai/acubed";
+click D111 "https://github.com/stepmanai/stepman";
+click D211 "https://github.com/stepmanai/stepman";
+click D11 "https://github.com/stepmanai/stepman";
+click H1 "https://github.com/stepmanai/stepman";
 style A1 height:0px;
 style A4 height:0px;
 style D3 height:0px;
 style F3 height:0px;
+style Q height:0px;
+style P height:0px;
 classDef test font-size:24px
 class F3 test
 class D3 test
+class C33 test
+class Q test
+class P test
+style D311 height:0px;
+style F311 height:0px;
 linkStyle 9 font-size:24px
 linkStyle 10 font-size:24px
+class F311 test
+class D311 test
+linkStyle 23 font-size:24px
+linkStyle 24 font-size:24px
+style C33 height:0px;
+linkStyle 15 font-size:24px
 
 ``` 
