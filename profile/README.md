@@ -31,8 +31,8 @@ Welcome to `stepman.ai`, an organization devoted to support community-driven ope
 and offers modules to address several key challenges including:
 - File format standardization to facilitate framework integration with `trancecode`
 - Scalability of the definition of difficulty to minimize inherent biases and subjectivity with `acubed`
-- Playing performance evaluations based on accuracy and precision to objectively reward players with `pa-scoring`
-- Cross-platform ranked leaderboards to measure and compare player’s skill under a modified ELO rating system with `stepman-rating`
+- Playing performance evaluations rewarded to players based on standard metrics in confusion matrices (e.g. accuracy, precision, etc.) with `psyduck`
+- Cross-platform ranked leaderboards to measure and compare player’s skill under a modified ELO rating system with `stepman`
 
 Each module is developed using the following technological stack:
 <p align="center">
@@ -73,27 +73,26 @@ and operates under the overall `stepman.ai` ecosystem depicted in the following 
 
 flowchart LR
 
-D1@{ label: "pa-scoring" } --> D@{ label: "stepman-rating" };
-D---|Player's
-Rating|E2[ ];
+D1 ---|Player's
+Rating| D@{ label: "stepman" } --> G@{shape: braces, label: "Leaderboards"};
 C@{ label: "acubed" }---|"Stepfile
 Features"|D1;
-B --> C;
+B ---|Standardized
+File Format| C;
 A4[ ]---|"In-Game
 APIs"|B;
 A1[ ]---|"External
 Files"|B@{label: "trancecode" };
 C---|"Stepfile
 Difficulty"|F;
-F@{shape: framed-circle} -->|Player's
-Score|D1@{ label: "pa-scoring" };
+F@{shape: braces, label: "Player"} -->|Player's
+Score|D1@{ label: "psyduck" };
 
-click B "https://github.com/stepmanai";
-click C "https://github.com/stepmanai";
-click D1 "https://github.com/stepmanai";
-click D "https://github.com/stepmanai";
+click B "https://github.com/stepmanai/trancecode";
+click C "https://github.com/stepmanai/acubed";
+click D1 "https://github.com/stepmanai/psyduck";
+click D "https://github.com/stepmanai/stepman";
 style A1 height:0px;
 style A4 height:0px;
-style E2 height:0px;
 
 ``` 
