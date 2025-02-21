@@ -73,13 +73,14 @@ and operates under the overall `stepman.ai` ecosystem depicted in the following 
 flowchart LR
 
 D1 ---|Player's
-Stepfile
-Score| R@{shape: sm-circ} --> D
+Score from
+Stepfile| R@{shape: sm-circ} ---|Player's
+High
+Scores| D
 
 D3["..."] -.-|Player's
-Other
-Stepfile
-Scores| R;
+Scores from
+Other Stepfiles| R;
 
 F2 -.-> H@{shape: braces, label: "Other
 Players"} -.- D2["..."]
@@ -108,6 +109,7 @@ Performance|D1@{ label: "stepman.score" };
 
 D2-.-|Other 
 Players'
+High
 Scores|D;
 
 click B "https://github.com/stepmanai/trancecode";
