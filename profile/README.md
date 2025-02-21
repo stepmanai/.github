@@ -73,26 +73,45 @@ and operates under the overall `stepman.ai` ecosystem depicted in the following 
 
 flowchart LR
 
-D1 ---|Player's
-Rating| D@{ label: "stepman" } --> G@{shape: braces, label: "Leaderboards"};
-C@{ label: "acubed" }---|"Stepfile
-Features"|D1;
-B ---|Standardized
-File Format| C;
-A4[ ]---|"In-Game
-APIs"|B;
 A1[ ]---|"External
 Files"|B@{label: "trancecode" };
+A4[ ]---|"In-Game
+APIs"|B;
+B ---|Standardized
+File Format| C@{ label: "acubed" };
 C---|"Stepfile
-Difficulty"|F;
-F@{shape: braces, label: "Player"} -->|Player's
-Score|D1@{ label: "psyduck" };
+Features"|D1@{ label: "psyduck" };
+C---|"Stepfile
+Difficulty"|F@{ label: "Player 1" };
+F -->|Player 1's
+Score|D1;
+D1 ---|Player 1's
+Rating| D@{ label: "stepman" };
+D --> G@{shape: braces, label: "Leaderboards"};
+
+C ~~~ F3["..."] ~~~ |...| D3["..."] ~~~ |...| D@{ label: "stepman" };
+
+C---|"Stepfile
+Difficulty"|F2@{ label: "Player N" };
+F2 -->|Player N's
+Score|D2;
+C---|"Stepfile
+Features"|D2@{ label: "psyduck" };
+D2 ---|Player N's
+Rating| D@{ label: "stepman" };
+
 
 click B "https://github.com/stepmanai/trancecode";
 click C "https://github.com/stepmanai/acubed";
 click D1 "https://github.com/stepmanai/psyduck";
+click D2 "https://github.com/stepmanai/psyduck";
 click D "https://github.com/stepmanai/stepman";
 style A1 height:0px;
 style A4 height:0px;
+style D3 height:0px;
+style F3 height:0px;
+style F height:0px;
+style F2 height:0px;
+
 
 ``` 
