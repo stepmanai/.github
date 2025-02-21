@@ -66,7 +66,8 @@ and operates under the overall `stepman.ai` ecosystem depicted in the following 
     'theme': 'dark',
     'themeVariables': {
       'fontFamily': 'courier',
-      'fontSize': '12px'
+      'fontSize': '12px',
+      'secondaryColor': '#006100'
     }
   }
 }%%
@@ -82,17 +83,17 @@ File Format| C@{ label: "acubed" };
 C---|"Stepfile
 Features"|D1@{ label: "psyduck" };
 C---|"Stepfile
-Difficulty"|F@{ label: "Player 1" };
+Difficulty"|F@{ shape: braces, label: "Player 1" };
 F -->|Player 1's
 Score|D1;
 D1 ---|Player 1's
 Rating| D@{ label: "stepman" };
 D --> G@{shape: braces, label: "Leaderboards"};
 
-C ~~~ F3["..."] ~~~ |...| D3["..."] ~~~ |...| D@{ label: "stepman" };
+C ~~~ F3@{ label: "⋮" } ~~~ |⋮| D3["⋮"] ~~~ |⋮| D@{ label: "stepman" };
 
 C---|"Stepfile
-Difficulty"|F2@{ label: "Player N" };
+Difficulty"|F2@{ shape: braces, label: "Player N" };
 F2 -->|Player N's
 Score|D2;
 C---|"Stepfile
@@ -110,8 +111,10 @@ style A1 height:0px;
 style A4 height:0px;
 style D3 height:0px;
 style F3 height:0px;
-style F height:0px;
-style F2 height:0px;
-
+classDef test font-size:24px
+class F3 test
+class D3 test
+linkStyle 9 font-size:24px
+linkStyle 10 font-size:24px
 
 ``` 
