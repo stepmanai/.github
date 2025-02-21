@@ -76,7 +76,8 @@ flowchart LR
 D1@{ label: "pa-scoring" } --> D@{ label: "stepman-rating" };
 D---|Player's
 Rating|E2[ ];
-C@{ label: "acubed" }---D1;
+C@{ label: "acubed" }---|"Stepfile
+Features"|D1;
 B --> C;
 A4[ ]---|"In-Game
 APIs"|B;
