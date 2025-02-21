@@ -93,12 +93,12 @@ Leaderboards"};
 C ~~~ F3@{ label: "⋮" } ~~~ |⋮| D3["⋮"] ~~~ |⋮| D@{ label: "stepman" };
 
 C---|"Stepfile
-Difficulty"|F2@{ shape: braces, label: "Player N" };
-F2 -->|Player N's
+Difficulty"|F2@{ shape: braces, label: "Player M" };
+F2 -->|Player M's
 Score|D2;
 C---|"Stepfile
 Features"|D2@{ label: "stepman" };
-D2 ---|Player N's
+D2 ---|Player M's
 Rating| D@{ label: "stepman" };
 
 B ~~~|⋮| C33["⋮"]
@@ -118,12 +118,12 @@ Leaderboards"};
 C11 ~~~ F311@{ label: "⋮" } ~~~ |⋮| D311["⋮"] ~~~ |⋮| D11@{ label: "stepman" };
 
 C11---|"Stepfile
-Difficulty"|F211@{ shape: braces, label: "Player N" };
-F211 -->|Player N's
+Difficulty"|F211@{ shape: braces, label: "Player M" };
+F211 -->|Player M's
 Score|D211;
 C11---|"Stepfile
 Features"|D211@{ label: "stepman" };
-D211 ---|Player N's
+D211 ---|Player M's
 Rating| D11@{ label: "stepman" };
 
 G--> H1@{ label: "stepman" }--> H@{ shape: braces, label: "Overall
