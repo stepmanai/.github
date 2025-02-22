@@ -51,6 +51,10 @@ Each module is developed using the following technological stack:
         <source srcset="https://cdn.simpleicons.org/pypi/000/fff"  media="(prefers-color-scheme: dark)">
         <img src="https://cdn.simpleicons.org/pypi/000/000" alt="Logo" width="50px" height=auto></a>
     </picture></a>ㅤ
+    <a href="https://www.docker.com/"><picture>
+        <source srcset="https://cdn.simpleicons.org/docker/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/docker/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
     <a href="https://www.mongodb.com/"><picture>
         <source srcset="https://cdn.simpleicons.org/mongodb/000/fff"  media="(prefers-color-scheme: dark)">
         <img src="https://cdn.simpleicons.org/mongodb/000/000" alt="Logo" width="50px" height=auto></a>
