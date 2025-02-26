@@ -3,7 +3,7 @@
 <div align="center">
     <picture>
         <source srcset="assets/logo/stepman.ai/dark-mode/stepmanai.png"  media="(prefers-color-scheme: dark)">
-        <img src="assets/logo/acubed/no-dark-mode/stepmanai.png" alt="Logo" width="200px" height=auto>
+        <img src="assets/logo/stepman.ai/no-dark-mode/stepmanai.png" alt="Logo" width="200px" height=auto>
     </picture>
 </div>
 
