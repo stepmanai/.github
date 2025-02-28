@@ -13,7 +13,7 @@ on:
       - main
 
 jobs:
-  quality:
+  upload-logos:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,9 +29,12 @@ jobs:
           OBJECT
 
       - name: Get list of all repositories in stepmanai organization.
-        run: gh repo list stepmanai --public --json name --jq .[].name
+        run: echo "GITHUB_REPOS=$(gh repo list stepmanai --visibility=public --json name --jq .[].name)" >> $GITHUB_ENV 
         env:
           GH_TOKEN: ${{ secrets.GH_ACTION_KEY }}
+
+      - name: Test
+        run: echo $GITHUB_REPOS
 
       # - name:
       #   run: ||
