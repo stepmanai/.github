@@ -2,6 +2,12 @@ name: Update all logos on push to main branch
 
 on:
   workflow_dispatch:
+    inputs:
+      repo_name:
+        description: |
+          You can specify name of the repository where workflows should be pushed manually. As long as repository is not ignored by workflow settings.
+          If you do not specify exact repository name, the workflow will try to replicate all missing changes to all repositories.
+        required: false
   push:
     branches:
       - main
@@ -26,7 +32,7 @@ jobs:
         uses: derberg/manage-files-in-multiple-repositories@v2
         with:
           github_token: ${{ secrets.GH_ACTION_KEY }}
-          patterns_to_include: 'profile/assets/logo/*'
+          patterns_to_include: 'profile/assets/logo/'
           patterns_to_ignore: '.github/workflows/update-logos-in-repos.yml'
           committer_username: ${{ github.actor }}
           committer_email: ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
