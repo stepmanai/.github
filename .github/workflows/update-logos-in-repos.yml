@@ -28,12 +28,27 @@ jobs:
           ${{ toJson(github) }}
           OBJECT
 
-      - name: Push logos to all stepmanai repositories
-        uses: derberg/manage-files-in-multiple-repositories@v2
-        with:
-          github_token: ${{ secrets.GH_ACTION_KEY }}
-          patterns_to_include: 'profile/assets/logo/'
-          patterns_to_ignore: '.github/workflows/update-logos-in-repos.yml'
-          committer_username: ${{ github.actor }}
-          committer_email: ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
-          commit_message: "Created ${{ github.event.repository.name }} project with update-logos-in-repos workflow from .github."
+      - name: Get list of all repositories in stepmanai organization.
+        run: gh repo list stepmanai
+        env:
+          GH_TOKEN: ${{ secrets.GH_ACTION_KEY }}
+
+      # - name:
+      #   run: ||
+      #     git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/project target
+      #     rm everything but the .git directory
+      #     copy source\files target
+      #     cd target
+      #     git add .
+      #     git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
+      #     git push target master
+
+      # - name: Push logos to all stepmanai repositories
+      #   uses: derberg/manage-files-in-multiple-repositories@v2
+      #   with:
+      #     github_token: ${{ secrets.GH_ACTION_KEY }}
+      #     patterns_to_include: 'profile/assets/logo/'
+      #     patterns_to_ignore: '.github/workflows/update-logos-in-repos.yml'
+      #     committer_username: ${{ github.actor }}
+      #     committer_email: ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+      #     commit_message: "Created ${{ github.event.repository.name }} project with update-logos-in-repos workflow from .github."
