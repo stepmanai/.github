@@ -25,7 +25,7 @@ jobs:
 
       - name: Get list of all repositories in stepmanai organization.
         id: get-repos
-        run: echo "::set-output name=file::$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not))')"
+        run: echo "$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not))')" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GH_ACTION_KEY }}
 
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        file: ${{ fromJson(needs.locate-repos.output.file) }}
+        file: ${{ fromJson(needs.locate-repos.outputs.file) }}
     steps:
       - name: Test
         run: echo "${{ matrix.file }}"
