@@ -25,7 +25,7 @@ jobs:
 
       - name: Get list of all repositories in stepmanai organization.
         id: get-repos
-        run: echo "$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not))')" >> $GITHUB_OUTPUT
+        run: echo "name=file::$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not))')" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GH_ACTION_KEY }}
 
