@@ -54,6 +54,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.GH_ACTION_KEY }}
         with:
           source-files: 'profile/assets/logo/${{ matrix.repo }}/*'
+          destination-branch: main
           destination-username: stepmanai
           destination-repository: ${{ matrix.repo }}
           destination-directory: 'assets/logo/'
