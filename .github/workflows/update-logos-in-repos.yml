@@ -2,20 +2,15 @@ name: Update all logos on push to main branch
 
 on:
   workflow_dispatch:
-    inputs:
-      repo_name:
-        description: |
-          You can specify name of the repository where workflows should be pushed manually. As long as repository is not ignored by workflow settings.
-          If you do not specify exact repository name, the workflow will try to replicate all missing changes to all repositories.
-        required: false
   push:
     branches:
       - main
 
 jobs:
-  upload-logos:
+  locate-repos:
     runs-on: ubuntu-latest
-
+    output:
+      file: ${{ steps.get-repos.outputs.file }}
     steps:
       - name: Check out .profile repository
         uses: actions/checkout@v4
@@ -29,12 +24,20 @@ jobs:
           OBJECT
 
       - name: Get list of all repositories in stepmanai organization.
-        run: echo "GITHUB_REPOS=$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not))')" >> $GITHUB_ENV
+        id: get-repos
+        run: echo "::set-output name=file::$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not))')"
         env:
           GH_TOKEN: ${{ secrets.GH_ACTION_KEY }}
 
+  check:
+    needs: locate-repos
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        file: ${{ fromJson(needs.locate-repos.output.file) }}
+    steps:
       - name: Test
-        run: echo $GITHUB_REPOS
+        run: echo "${{ matrix.file }}"
 
       # - name:
       #   run: ||
