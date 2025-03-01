@@ -46,7 +46,10 @@ jobs:
         repo: ${{ fromJSON(needs.list-repos.outputs.repo_list) }}
     steps:
       - name: Test
-        run: echo "${{ matrix.repo }}"
+        run: echo "${{ matrix.repo.lower() }}"
+
+
+
 
       # - name:
       #   run: ||
