@@ -9,7 +9,7 @@ on:
 jobs:
   locate-repos:
     runs-on: ubuntu-latest
-    output:
+    outputs:
       file: ${{ steps.get-repos.outputs.file }}
     steps:
       - name: Check out .profile repository
