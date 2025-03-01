@@ -54,7 +54,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.GH_ACTION_KEY }}
         with:
           source-files: 'profile/assets/logo/${{ matrix.repo }}/*'
-          destination-username: ${{ github.actor }}
+          destination-username: stepmanai
           destination-repository: ${{ matrix.repo }}
           destination-directory: 'assets/logo/'
-          commit-email: ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
+          commit-email: ${{ github.actor_id }}+stepmanai@users.noreply.github.com
