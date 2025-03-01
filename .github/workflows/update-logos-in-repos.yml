@@ -13,9 +13,11 @@ on:
       - main
 
 jobs:
-  upload-logos:
+  list-repos:
+    name: Get list of all Stepman.AI repositories
     runs-on: ubuntu-latest
-
+    outputs: 
+      repo_list: ${{ steps.get-repo-list.outputs.repos }}
     steps:
       - name: Check out .profile repository
         uses: actions/checkout@v4
@@ -29,12 +31,22 @@ jobs:
           OBJECT
 
       - name: Get list of all repositories in stepmanai organization.
-        run: echo "GITHUB_REPOS=$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not))')" >> $GITHUB_ENV
+        id: get-repo-list
+        run: echo "repos=$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not)) | @json')" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GH_ACTION_KEY }}
 
+
+  testing:
+    name: Testing if this works....
+    runs-on: ubuntu-latest
+    needs: [list-repos]
+    strategy: 
+      matrix: 
+        repo: ${{ fromJSON(needs.list-repos.outputs.repo_list) }}
+    steps:
       - name: Test
-        run: echo $GITHUB_REPOS
+        run: echo "${{ matrix.repo }}"
 
       # - name:
       #   run: ||
