@@ -32,41 +32,29 @@ jobs:
 
       - name: Get list of all repositories in stepmanai organization.
         id: get-repo-list
-        run: echo "repos=$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | select(contains(".github") | not)) | @json')" >> $GITHUB_OUTPUT
+        run: echo "repos=$(gh repo list stepmanai --visibility=public --json name --jq 'map(.name | ascii_downcase | select(contains(".github") | not)) | @json')" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GH_ACTION_KEY }}
 
 
-  testing:
-    name: Testing if this works....
+  upload-logo:
+    name: Upload logos to assets folder in repo
     runs-on: ubuntu-latest
     needs: [list-repos]
     strategy: 
       matrix: 
         repo: ${{ fromJSON(needs.list-repos.outputs.repo_list) }}
     steps:
-      - name: Test
-        run: echo "${{ matrix.repo.lower() }}"
+      - name: Verifying list-repo job is successful
+        run: echo "${{ matrix.repo }}"
 
-
-
-
-      # - name:
-      #   run: ||
-      #     git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/project target
-      #     rm everything but the .git directory
-      #     copy source\files target
-      #     cd target
-      #     git add .
-      #     git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
-      #     git push target master
-
-      # - name: Push logos to all stepmanai repositories
-      #   uses: derberg/manage-files-in-multiple-repositories@v2
-      #   with:
-      #     github_token: ${{ secrets.GH_ACTION_KEY }}
-      #     patterns_to_include: 'profile/assets/logo/'
-      #     patterns_to_ignore: '.github/workflows/update-logos-in-repos.yml'
-      #     committer_username: ${{ github.actor }}
-      #     committer_email: ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
-      #     commit_message: "Created ${{ github.event.repository.name }} project with update-logos-in-repos workflow from .github."
+      - name: Push logos to external repository
+        uses: nkoppel/push-files-to-another-repository@v1.1.4
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_ACTION_KEY }}
+        with:
+          source-files: 'profile/assets/logo/${{ matrix.repo }}/*'
+          destination-username: ${{ github.actor }}
+          destination-repository: ${{ matrix.repo }}
+          destination-directory: 'assets/logo/'
+          commit-email: ${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com
