@@ -2,12 +2,6 @@ name: Update all logos on push to main branch
 
 on:
   workflow_dispatch:
-    inputs:
-      repo_name:
-        description: |
-          You can specify name of the repository where workflows should be pushed manually. As long as repository is not ignored by workflow settings.
-          If you do not specify exact repository name, the workflow will try to replicate all missing changes to all repositories.
-        required: false
   push:
     branches:
       - main
@@ -59,3 +53,4 @@ jobs:
           destination-repository: ${{ matrix.repo }}
           destination-directory: 'assets/logo/'
           commit-email: ${{ github.actor_id }}+stepmanai@users.noreply.github.com
+          commit-message: Updated logo from update-logos-in-repos workflow in .profile repo
