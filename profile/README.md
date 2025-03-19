@@ -57,9 +57,21 @@ Each module is developed using the following technological stack:
         <source srcset="https://cdn.simpleicons.org/docker/000/fff"  media="(prefers-color-scheme: dark)">
         <img src="https://cdn.simpleicons.org/docker/000/000" alt="Logo" width="50px" height=auto></a>
     </picture></a>ㅤ
-    <a href="https://www.mongodb.com/"><picture>
-        <source srcset="https://cdn.simpleicons.org/mongodb/000/fff"  media="(prefers-color-scheme: dark)">
-        <img src="https://cdn.simpleicons.org/mongodb/000/000" alt="Logo" width="50px" height=auto></a>
+    <a href="https://supabase.com/"><picture>
+        <source srcset="https://cdn.simpleicons.org/supabase/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/supabase/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
+    <a href="https://duckdb.org/"><picture>
+        <source srcset="https://cdn.simpleicons.org/duckdb/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/duckdb/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
+    <a href="https://www.dotenv.org/"><picture>
+        <source srcset="https://cdn.simpleicons.org/dotenv/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/dotenv/000/000" alt="Logo" width="50px" height=auto></a>
+    </picture></a>ㅤ
+    <a href="https://www.getdbt.com/"><picture>
+        <source srcset="https://cdn.simpleicons.org/dbt/000/fff"  media="(prefers-color-scheme: dark)">
+        <img src="https://cdn.simpleicons.org/dbt/000/000" alt="Logo" width="50px" height=auto></a>
     </picture></a>
 </p>
 
