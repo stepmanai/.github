@@ -68,7 +68,6 @@ and operates under the overall `stepman.ai` ecosystem depicted in the following 
 ```mermaid
 %%{
   init: {
-    'theme': 'dark',
     'themeVariables': {
       'fontFamily': 'courier',
       'fontSize': '12px'
