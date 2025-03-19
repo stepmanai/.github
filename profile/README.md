@@ -1,4 +1,6 @@
 <!-- PROJECT LOGO -->
+
+
 <br />
 <div align="center">
     <picture>
@@ -15,15 +17,15 @@ Welcome to `stepman.ai`, an organization devoted to support community-driven ope
         <img src="assets/logo/etterna/no-dark-mode.svg" alt="Logo" width="50px" height=auto opacity=0.3></a>
     </picture></a>ㅤ
     <a href="https://www.flashflashrevolution.com/"><picture>
-        <source srcset="assets/logo/ffr/dark-mode.svg"  media="(prefers-color-scheme: dark)">
+        <source srcset="assets/logo/ffr/dark-mode.svg" media="(prefers-color-scheme: dark)">
         <img src="assets/logo/ffr/no-dark-mode.svg" alt="Logo" width="50px" height=auto>
     </picture></a>ㅤ
     <a href="https://osu.ppy.sh/"><picture>
-        <source srcset="assets/logo/osumania/dark-mode.svg"  media="(prefers-color-scheme: dark)">
+        <source srcset="assets/logo/osumania/dark-mode.svg" media="(prefers-color-scheme: dark)">
         <img src="assets/logo/osumania/no-dark-mode.svg" alt="Logo" width="50px" height=auto opacity=0.3>
     </picture></a>ㅤ
     <a href="https://quavergame.com/"><picture>
-        <source srcset="assets/logo/quaver/dark-mode.svg"  media="(prefers-color-scheme: dark)">
+        <source srcset="assets/logo/quaver/dark-mode.svg" media="(prefers-color-scheme: dark)">
         <img src="assets/logo/quaver/no-dark-mode.svg" alt="Logo" width="50px" height=auto opacity=0.3>
     </picture></a>
   </p>
