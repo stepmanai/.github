@@ -1,5 +1,5 @@
 <!-- PROJECT LOGO -->
-
+![GitHub-Mark-Light](https://user-images.githubusercontent.com/3369400/139447912-e0f43f33-6d9f-45f8-be46-2df5bbc91289.png#gh-dark-mode-only)![GitHub-Mark-Dark](https://user-images.githubusercontent.com/3369400/139448065-39a229ba-4b06-434b-bc67-616e2ed80c8f.png#gh-light-mode-only)
 
 <br />
 <div align="center">
@@ -14,7 +14,7 @@ Welcome to `stepman.ai`, an organization devoted to support community-driven ope
   <p align="center">
     <a href="https://etternaonline.com/"><picture>
         <source srcset="assets/logo/etterna/dark-mode.svg"  media="(prefers-color-scheme: dark)">
-        <img src="assets/logo/etterna/no-dark-mode.svg" alt="Logo" width="50px" height=auto opacity=0.3></a>
+        <img src="assets/logo/etterna/no-dark-mode.svg" alt="Logo" width="50px" height=auto></a>
     </picture></a>ㅤ
     <a href="https://www.flashflashrevolution.com/"><picture>
         <source srcset="assets/logo/ffr/dark-mode.svg" media="(prefers-color-scheme: dark)">
